@@ -1,6 +1,5 @@
 HamiltonBot
 =========
-## Self Project 
 
 This is a Python Bot that uses pyautogui to automatically enter user defined data into the Hamilton Website.
 
