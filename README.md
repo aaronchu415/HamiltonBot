@@ -1,7 +1,10 @@
 HamiltonBot
 =========
 
-This is a Python Bot that uses pyautogui to automatically enter user defined data into the Hamilton Website.
+This is a Python Bot that uses pyautogui to automatically enter user defined data into the Hamilton Lottery Website.
+
+https://pyautogui.readthedocs.io/en/latest/
+https://www.luckyseat.com/hamilton-ny/
 
 ###### Setup:
 
