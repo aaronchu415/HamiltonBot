@@ -117,7 +117,7 @@ class Automator:
 
         # wait for page to load
         # press tab 4 times to get to the firstname field
-        time.sleep(3)
+        time.sleep(5)
         pyautogui.press('tab')
         pyautogui.press('tab')
         pyautogui.press('tab')
