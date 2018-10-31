@@ -41,3 +41,10 @@ Configre input.json:
 
     > cd HamiltonBot
     > python3 main.py
+    
+###### Disclaimer:
+
+This is just a sample demonstration and is not intended for use actual use!
+Note that google recaption will start recongnize that a script is running and will not allow submission after a few attempts
+Again this is just a sample project and demonstration.
+
