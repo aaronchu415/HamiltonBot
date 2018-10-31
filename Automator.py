@@ -107,8 +107,10 @@ class Automator:
                             self.chromeCorrd["y"], button='left')
         # press command N to open a new window
         pyautogui.keyDown('command')
+        pyautogui.keyDown('shiftleft')
         pyautogui.press('n')
         pyautogui.keyUp('command')
+        pyautogui.keyUp('shiftleft')
         # type in the link and press enter
         pyautogui.typewrite(self.link)
         pyautogui.press('enter')
