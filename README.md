@@ -18,7 +18,7 @@ install pyautogui and dependencies:
 
   or
 
-  1. sudo pip3 install -r requirements.txt
+  1. ```sudo pip3 install -r requirements.txt```
   
 Configre input.json:
 
