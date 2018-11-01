@@ -1,6 +1,7 @@
 
 import pyautogui
 import time
+from random import randint
 
 class Automator:
 
@@ -100,6 +101,24 @@ class Automator:
         self.submitButtonCord["y"] = tupleXY[1]
         return self
 
+    #move mouse from xy to another xy cord. 
+    def mouseMove(self, x1,y1,x2,y2):
+
+        #move in a random time
+        time = randint(1, 2) * .1
+        #starting point
+        pyautogui.moveTo(x1, y1, duration=time)
+
+        #move to 3 random locations
+        for i in range(3):
+            time = randint(1, 2) * .1
+            randomX = x1 + randint(50, 500)
+            randomY = y1 + randint(50, 500)
+            pyautogui.moveTo(randomX, randomY, duration=time)
+
+        #move to destination
+        pyautogui.moveTo(x2, y2, duration=time)    
+
     def automate(self, mobile=True, submit=False):
         # double click the chrome icon if first time running, else skip step as we have already selected chrome
         if (self.firstRun):
@@ -117,6 +136,7 @@ class Automator:
 
         # wait for page to load
         # press tab 4 times to get to the firstname field
+
         time.sleep(5)
         pyautogui.press('tab')
         pyautogui.press('tab')
@@ -147,23 +167,45 @@ class Automator:
         pyautogui.press('down')
         pyautogui.press('down')
 
+        #click the button
         pyautogui.click(self.eightTeenButtonCord["x"],
                         self.eightTeenButtonCord["y"], button='left')
         time.sleep(1)
 
+        #if user wants to enter mobile then enter, else skip
         if (mobile):
+            ##move mouse from previous button to next button
+            self.mouseMove(self.eightTeenButtonCord["x"], self.eightTeenButtonCord["y"], self.mobileButtonCord["x"], self.mobileButtonCord["y"])
+
             pyautogui.click(self.mobileButtonCord["x"],
                             self.mobileButtonCord["y"], button='left')
             time.sleep(1)
+            
+            self.mouseMove(self.mobileButtonCord["x"], self.mobileButtonCord["y"], self.ticketButtonCord["x"], self.ticketButtonCord["y"])
 
+        else:
+            ##move mouse from previous button to next button
+            self.mouseMove(self.eightTeenButtonCord["x"], self.eightTeenButtonCord["y"], self.ticketButtonCord["x"], self.ticketButtonCord["y"])
+
+        #click the button
         pyautogui.click(self.ticketButtonCord["x"],
                         self.ticketButtonCord["y"], button='left')
         time.sleep(1)
+
+        ##move mouse from previous button to next button
+        self.mouseMove(self.ticketButtonCord["x"], self.ticketButtonCord["y"],self.recaptionCord["x"], self.recaptionCord["y"])
+
+        #click the button
         pyautogui.click(self.recaptionCord["x"],
                         self.recaptionCord["y"], button='left')
         time.sleep(3)
 
+
+        #if user wants to submit then press submit, else nothing
         if (submit):
+            ##move mouse from previous button to next button
+            self.mouseMove(self.recaptionCord["x"], self.recaptionCord["y"],self.submitButtonCord["x"], self.submitButtonCord["y"])
+
             pyautogui.click(self.submitButtonCord["x"],
                             self.submitButtonCord["y"], button='left')
             time.sleep(1)

@@ -15,6 +15,10 @@ install pyautogui and dependencies:
   2. ```sudo pip3 install pyobjc-core```
   3. ```sudo pip3 install pyobjc```
   4. ```sudo pip3 install pyautogui```
+
+  or
+
+  1. sudo pip3 install -r requirements.txt
   
 Configre input.json:
 

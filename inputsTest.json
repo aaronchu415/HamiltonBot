@@ -1,0 +1,36 @@
+{
+    "input1": {
+        "link": "https://www.luckyseat.com/hamilton-ny/",
+        "firstName": "Aaron",
+        "lastName": "Smith",
+        "email": "aaronsmith@gmail.com",
+        "zip": "94444",
+        "phone": "6505555555",
+
+        "chromeCorrd": {
+            "x": "1414",
+            "y": "307"
+        },
+        "eightTeenButtonCord": {
+            "x": "224",
+            "y": "327"
+        },
+        "ticketButtonCord": {
+            "x": "959",
+            "y": "657"
+        },
+        "mobileButtonCord": {
+            "x": "212",
+            "y": "555"
+        },
+        "recaptionCord": {
+            "x": "227",
+            "y": "764"
+        },
+        "submitButtonCord": {
+            "x": "376",
+            "y": "855"
+        }
+    }
+      
+}
