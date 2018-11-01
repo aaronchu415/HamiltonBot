@@ -42,6 +42,10 @@ Configre input.json:
     > cd HamiltonBot
     > python3 main.py
     
+###### Result:
+
+<img src="https://thumbs.gfycat.com/IcyKnobbyHornedviper-size_restricted.gif" width="800" height="500" />
+
 ###### Disclaimer:
 
 This is just a sample demonstration and is not intended for use actual use!
